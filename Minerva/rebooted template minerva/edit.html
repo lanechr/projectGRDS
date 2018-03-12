@@ -1,0 +1,121 @@
+<!doctype html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700|Merriweather:400italic,400' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+	<script src="js/modernizr.js"></script> <!-- Modernizr -->
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+	<script>
+$(document).ready(function() {
+    // Configure/customize these variables.
+    var showChar = 150;  // How many characters are shown by default
+    var ellipsestext = "...";
+    var moretext = "<br><button>Read More</button>";
+    var lesstext = "<br><button>Read Less</button>";
+    
+
+    $('.more').each(function() {
+        var content = $(this).html();
+ 
+        if(content.length > showChar) {
+ 
+            var c = content.substr(0, showChar);
+            var h = content.substr(showChar, content.length - showChar);
+ 
+            var html = c + '<span class="moreellipses">' + ellipsestext+ '&nbsp;</span><span class="morecontent"><span>' + h + '</span>&nbsp;&nbsp;<a href="" class="morelink">' + moretext + '</a></span>';
+ 
+            $(this).html(html);
+        }
+ 
+    });
+ 
+    $(".morelink").click(function(){
+        if($(this).hasClass("less")) {
+            $(this).removeClass("less");
+            $(this).html(moretext);
+        } else {
+            $(this).addClass("less");
+            $(this).html(lesstext);
+        }
+        $(this).parent().prev().toggle();
+        $(this).prev().toggle();
+        return false;
+    });
+});
+
+</script>
+<style>
+
+</style>
+
+
+  	
+	<title>GRDS - Admin Edit</title>
+</head>
+<body class="body-results">
+	<a href="login.html" class="back-button">Logout</a>
+	<h1>Search GRDS</h1>
+	<!-- [number] refers to the number of results that are queried on [keyword] -->
+	<input type="text" name="search" placeholder="Search document keyword...">&nbsp;&nbsp;<input type="button" name="submit" value="Search">
+
+	<div class="top-button">
+		<button class="top-button">Sort</button>
+		<button class="top-button">Filter</button>
+	</div>
+
+	<!-- template for one result  -->
+	<div class="result-box">
+		<h2 style="float:left;">Common Activites</h2><button style="background-color: #cd5c5e; color: white; width:80px; height: 35px; margin-top: 19px; border-radius: 5px;">Edit</button>
+		<p class="more">Records of activities common to many government agencies. Each common record class from this section can be combined with any function undertaken by an agency, except where an exemption is indicated.
+		Note: If an agency is unsure as to whether any classes can be used to sentence core business records, please contact QSA for further assistance.</p>
+	
+	</div>
+
+	<div class="result-box">
+		<h2 style="float:left;">Asset Management</h2><button style="background-color: #cd5c5e; color: white; width:80px; height: 35px; margin-top: 19px; border-radius: 5px;">Edit</button>
+		<p class="more" >Acquiring, supplying, maintaining, repairing and disposing of moveable assets.
+		Moveable assets may include, but are not limited to: vehicles, machinery, plant, equipment, appliances, implements, tools, furniture, furnishings, clothing, chemicals, hardware (including IT), kitchen/cleaning items, medical supplies, stationery and software.
+		Excludes the management of buildings, structures and land and the management of moveable assets, required for the delivery of core functions, which have specific retention requirements (e.g. firearms).
+		See COMMON ACTIVITIES – Compensation for records relating to compensation/insurance claims for injuries and/or damage/loss of assets.
+		See FINANCIAL MANAGEMENT – Accounting for the financial management of moveable assets.
+		See PROPERTY MANAGEMENT for the management of buildings, structures or land.
+		See WORK HEALTH AND SAFETY – Accidents and Incidents for records relating to work health and safety accidents and incidents that involve agency assets.</p>
+		
+
+	</div>
+
+	<div class="result-box">
+				<h2 style="float:left;">Collection Management</h2><button style="background-color: #cd5c5e; color: white; width:80px; height: 35px; margin-top: 19px; border-radius: 5px;">Edit</button>
+		<p class="more" >Acquiring, organising and processing the collection of a library and/or information centre, museum, art gallery, theatre etc. Includes those collections that support agency functions and which are not their core business, e.g. school libraries. Also includes the selection, ordering, accessioning, acquisition, cataloguing, index, evaluation of collection material, and preserving of collection material and use of the collection.
+								Excludes agencies where collection management is a core function. 
+								See ASSET MANAGEMENT for records relating to the acquisition, maintenance and disposal of hardware, internet services, software and telecommunications equipment.
+								See COMMON ACTIVITIES: 
+								 
+								•	Policy
+								•	Planning
+								•	Procedures
+								•	Risk Management
+								 
+								See EXTERNAL RELATIONS:
+								•	Donations for records relating to gifts, benefits and bequests
+								•	Exhibitions for records relating to exhibitions
+								•	Program and Event Management for records relating to programs and events presented or hosted by a cultural institution or library.
+								See INFORMATION MANAGEMENT – Copyright Administration for records relating to copyright.
+								See PROPERTY MANAGEMENT for records relating to library, museum, art gallery, theatre, etc. buildings.
+								See WORKFORCE MANAGEMENT for records relating to employing staff.
+								See TRANSITORY AND SHORT TERM:
+								•	Collections-Control and Management for records relating to the control and management of general collections
+								•	Moveable Assets Controls and Stocktakes for records relating to collection stocktakes
+								•	Reference and Lending Services for records relating to services provided by staff
+								•	Space Management records relating to the assessment and management of storage space.</p>
+	
+
+	</div>
+</body>
+<html>

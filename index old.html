@@ -1,0 +1,55 @@
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Front End Test</title>
+    <link rel="stylesheet" href="stylesheets/landingPageStyle.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <script type="text/javascript" src="js/grdssearch.js"></script>
+    <script src="js/landingPage.js"></script>
+</head>
+
+<body>
+    <!--<form name="documentSearchForm" id="documentSearchForm" action="/action_page_post.php" onsubmit="return validateForm()" method="post">-->
+    <form name="documentSearchForm" id="documentSearchForm">
+        <ul id="searchForm">
+            <li>
+                <input id="searchInput" placeholder="Enter a document ID or keywords"> </li>
+            <li>
+                <select name="grdsFunctionList" id="grdsFunctionList" onchange="functionSelected()">
+                    <option value="none" disabled selected>Select Function</option>
+                    <option value="none"></option>
+                    <option value="functionOne">One</option>
+                    <option value="functionTwo">Two</option>
+                    <option value="functionThree">Three</option>
+                    <option value="functionFour">Four</option>
+                </select>
+            </li>
+            <li>
+                <select name="grdsActivityList" id="grdsActivityList" onchange="activitySelected()">
+                    <option value="none" disabled selected>Select Activity</option>
+                    <option value="none"></option>
+                    <option value="activityOne">One</option>
+                    <option value="activityTwo">Two</option>
+                    <option value="activityThree">Three</option>
+                    <option value="activityFour">Four</option>
+                </select>
+            </li>
+            <li>
+                <!--<input type="submit" value="Search" onclick="searchGRDS()">-->
+                <button onclick="searchGRDS()">Test</button>
+            </li>
+        </ul>
+    </form>
+    <div id="resultsWrapper">
+        <div id="testOutput"> </div> # of results:
+        <input type="text" name="noOfResults_text" id="noOfResults_text" placeholder="How many results? (int plz)" onchange="noOfResultsSelected_text()">
+        <div id="resultsDiv"> </div>
+    </div>
+</body>
+
+</html>

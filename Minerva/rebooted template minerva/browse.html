@@ -1,0 +1,555 @@
+<!doctype html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700|Merriweather:400italic,400' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+	<script src="js/modernizr.js"></script> <!-- Modernizr -->
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Harmattan" rel="stylesheet">
+  <script src="https://use.fontawesome.com/f3aa8503b7.js"></script> 
+  <script type="text/javascript" src="js/main.js"></script>
+	<link href="css/johngallery1.min.css" rel="stylesheet">
+	  <link href="css/bootstrap.min.css" rel="stylesheet">
+	<title>BROWSE GRDS</title>
+	<script>
+$(document).ready(function() {
+    // Configure/customize these variables.
+    var showChar = 150;  // How many characters are shown by default
+    var ellipsestext = "...";
+    var moretext = "<button>Read More</button>";
+    var lesstext = "<button>Read Less</button>";
+    
+
+    $('.more').each(function() {
+        var content = $(this).html();
+ 
+        if(content.length > showChar) {
+ 
+            var c = content.substr(0, showChar);
+            var h = content.substr(showChar, content.length - showChar);
+ 
+            var html = c + '<span class="moreellipses">' + ellipsestext+ '&nbsp;</span><span class="morecontent"><span>' + h + '</span>&nbsp;&nbsp;<a href="" class="morelink">' + moretext + '</a></span>';
+ 
+            $(this).html(html);
+        }
+ 
+    });
+ 
+    $(".morelink").click(function(){
+        if($(this).hasClass("less")) {
+            $(this).removeClass("less");
+            $(this).html(moretext);
+        } else {
+            $(this).addClass("less");
+            $(this).html(lesstext);
+        }
+        $(this).parent().prev().toggle();
+        $(this).prev().toggle();
+        return false;
+    });
+});
+
+
+		$(document).ready(function() {
+		//$(".xxx").hide();
+		$("#advice").hide();
+		$("#agreements").hide();
+		  $('#selectMe').change(function() {
+		 
+		  var value = $(this).val();
+		   alert($(this).val());
+		  if (value == "1"){
+			$("#advice").show();
+			}
+			 if (value == "2"){
+			$("#agreements").show();
+			
+			}
+			
+			
+		  });
+		});
+</script>
+
+<script type="text/javascript">
+   function toggle_visibility(id) {
+       var e = document.getElementById(id);
+       if(e.style.display == 'none')
+          e.style.display = 'block';
+   }
+</script>
+
+</head>
+<body class="body-results">
+	<a href="index.html" class="back-button">Back</a>
+	<h2 style="margin-left:0%;">Browse</h2>
+
+	<div class="row">
+      <div class="col-sm-4 col-sm-offset-4 text-center">
+				<!--tabs Drop down bar-->
+					<div class="bs-example" style="width:200%; margin-left: -50%;">
+						<ul class="nav nav-tabs">
+							<li class="dropdown" style="float:left; margin-left: 42%; margin-top: 3%;">
+							<a data-toggle="dropdown" class="dropdown-toggle" href="#sectionT">Main Sections<b class="caret"></b></a>
+								<ul class="dropdown-menu">
+									<li><a data-toggle="tab" href="#dropdownp16">Common Activites</a></li>
+									<li><a data-toggle="tab" href="#dropdownp15">Asset Management</a></li>
+									<li><a data-toggle="tab" href="#dropdownp14">Collection Management</a></li>
+									<li><a data-toggle="tab" href="#dropdownp13">External Relations</a></li>
+									<li><a data-toggle="tab" href="#dropdownp12">Financial Management</a></li>
+									<li><a data-toggle="tab" href="#dropdownp11">Governing Bodies</a></li>
+									<li><a data-toggle="tab" href="#dropdownp10">Industrial Relations</a></li>
+									<li><a data-toggle="tab" href="#dropdownp9">Information Management</a></li>
+									<li><a data-toggle="tab" href="#dropdownp8">Legal Services</a></li>
+									<li><a data-toggle="tab" href="#dropdownp7">Property Management</a></li>
+									<li><a data-toggle="tab" href="#dropdownp6">Strategic Management</a></li>
+									<li><a data-toggle="tab" href="#dropdownp5">Work Health and Safety</a></li>
+									<li><a data-toggle="tab" href="#dropdownp4">Workforce Management</a></li>
+									<li><a data-toggle="tab" href="#dropdownp3">Transitory and Short Term</a></li>
+									
+								</ul>
+							</li>
+							
+        
+						</ul>
+						<div class="tab-content">
+
+							<div id="dropdownp16" class="tab-pane fade in active" style="">
+								<h2 style="margin-left: 0%;">Common Activites</h2>
+									<p style="text-align: justify;">Records of activities common to many government agencies. Each common record class from this section can be combined with any function undertaken by an agency, except where an exemption is indicated.
+									Note: If an agency is unsure as to whether any classes can be used to sentence core business records, please contact QSA for further assistance.</p>
+								<ul class="nav nav-tabs">
+									<li class="dropdown" style="float:left; margin-left: 42%;">
+									<a data-toggle="dropdown" class="dropdown-toggle" href="#sectionA">Sub-sections <b class="caret"></b></a>
+										<ul id="selectMe" class="dropdown-menu">
+											<li value="1"><a data-toggle="tab" href="#dropdownpA">Advice</a></li>
+											<li value="2"><a data-toggle="tab" href="#dropdownpB">Agreements</a></li>
+											<li><a data-toggle="tab" href="#dropdownpC">AUDIT</a></li>
+											<li><a data-toggle="tab" href="#dropdownpD">AUTHORISATIONS</a></li>
+											<li><a data-toggle="tab" href="#dropdownpE">COMMITTEES</a></li>
+											<li><a data-toggle="tab" href="#dropdownpE">COMPENSATION</a></li>
+											<li><a data-toggle="tab" href="#dropdownpE">COMPLIANCE</a></li>
+											<li><a data-toggle="tab" href="#dropdownpE">CORRUPTION PREVENTION AND DETECTION</a></li>
+											<li><a data-toggle="tab" href="#dropdownpE">EVALUATING AND REVIEWING</a></li>
+											<li><a data-toggle="tab" href="#dropdownpE">LIAISON</a></li>
+											<li><a data-toggle="tab" href="#dropdownpE">MEETINGS</a></li>
+											<li><a data-toggle="tab" href="#dropdownpE">PLANNING</a></li>
+											<li><a data-toggle="tab" href="#dropdownpE">POLICY</a></li>
+											<li><a data-toggle="tab" href="#dropdownpE">PROCEDURES</a></li>
+											<li><a data-toggle="tab" href="#dropdownpE">PROJECT MANAGEMENT</a></li>
+											<li><a data-toggle="tab" href="#dropdownpE">REPORTING</a></li>
+											<li><a data-toggle="tab" href="#dropdownpE">RESEARCH</a></li>
+											<li><a data-toggle="tab" href="#dropdownpE">RISK MANAGEMENT</a></li>
+											<li><a data-toggle="tab" href="#dropdownpE">SECURITY INVESTIGATIONS</a></li>
+											<li><a data-toggle="tab" href="#dropdownpE">SURVEILLANCE AND MONITORING</a></li>
+										</ul>
+									</li>
+								</ul>
+								<div class="tab-content">
+									<div id="dropdownpA"  class="tab-pane fade in active">
+									<h2>ADVICE</h2>
+										<p style="text-align: justify;">Offering of opinions or recommendations as to an action or judgement. Excludes advice or briefings provided to a Minister.
+										See EXTERNAL RELATIONS:
+										•	Enquiries and Reactions for records relating to enquiries from members of the community
+										•	Submissions for records relating to Ministerial briefings.
+										See LEGAL SERVICES – Legal Advice for records relating to legal advice provided to the agency by internal or external legal service providers. 
+										See TRANSITORY AND SHORT TERM – Routine Communication for records relating to advice provided or received by the agency that relates to general operational or administrative matters.</p>
+
+									</div>
+									<div id="dropdownpB"  class="tab-pane fade in active">
+									<h2>AGREEMENTS</h2>
+										
+										<p style="text-align: justify;">Establishing and managing binding arrangements, established for any purpose. Includes agreements, contracts, leases, mandates, tenders, memoranda of understanding and/or memoranda of agreement. Agreements include the provision of services by an external contractor or consultant as well as by using external services (outsourcing). Also includes managing partnerships and joint ventures between the agency and other agencies, both government and private, where there is a contract, joint contribution of funds and/or time, and co-research or collaboration between inter-departmental units, departments or agencies.
+										Excludes agreements which have additional evidential requirements beyond the statute of limitations (e.g. where an external contractor is engaged to remove asbestos from agency buildings and has not provided a final report/clearance certificate).
+										See LEGAL SERVICES:
+										•	Intellectual Property for records relating to the administration of intellectual property licences
+										•	Litigation and Prosecutions for records relating to litigation arising from contractual disputes.
+										See PROPERTY MANAGEMENT – Waste Management for records relating to the services carried out by suppliers that are contracted out.</p>
+									</div>
+									<div id="dropdownpC" class="tab-pane fade in active">
+									<h2>AUDIT</h2>
+									<p style="text-align: justify;">Officially checking financial, quality assurance and operational records to ensure they have been kept and maintained in accordance with agreed or legislated standards and correctly record the events, processes and business of an agency for a specified period. 
+									Audits may include, but are not limited to: compliance, financial, operational, recordkeeping, skills, health and safety, systems and quality assurance.
+									Excludes the core business records of the Queensland Audit Office.
+									See COMMON ACTIVITIES:
+									•	Compliance for records relating to managing compliance with quality management processes and compliance inspections
+									•	Evaluating and Reviewing for records relating to re-evaluating or re-examining in order to determine success or effectiveness.
+									See PROPERTY MANAGEMENT – Building and energy management-monitoring for records relating to energy management audit reports.
+									See WORKFORCE MANAGEMENT – Training for records relating to performance monitoring records and auditing of agencies with Registered Training Organisation (RTO) status.</p>
+									</div>
+									<div id="dropdownpD" class="tab-pane fade in active">
+									<h2>AUTHORISATIONS</h2>
+										<p style="text-align: justify;">Authorisation or permission to perform certain actions.
+										Excludes the delegations records held by a Minister or Assistant Minister’s Office.
+										See FINANCIAL MANAGEMENT – Authorisation for records relating to client authorisations to conduct financial transactions and statutory body financial approvals.
+										See Office of a Minister of the Crown & Parliamentary Secretaries Retention & Disposal Schedule (QDAN328) for records relating to Ministerial delegations and authorisations that are managed by the Ministerial Office.</p>
+
+									</div>
+									<div id="dropdownpE" class="tab-pane fade in active">
+									<h2>Committees</h2>
+										<p style="text-align: justify;">Managing formally established committees and task forces. Includes the committee’s establishment, appointment of members, terms of reference, proceedings, minutes of meetings, agendas, reports etc.
+										See COMMON ACTIVITIES – Routine meetings for records relating to non-committee meetings.
+										See FINANCIAL MANAGEMENT – Superannuation Fund Management for records relating to superannuation committees.
+										See GOVERNING BODIES for records relating to Board management.
+										See WORK HEALTH AND SAFETY – Committees for records relating to workplace health & safety committees.</p>
+
+									</div>
+								</div>
+							</div>
+							<div id="dropdownp15" class="tab-pane fade" style="">
+								<h2>Asset Management</h2>
+								<p style="text-align: justify;">Acquiring, supplying, maintaining, repairing and disposing of moveable assets.
+								Moveable assets may include, but are not limited to: vehicles, machinery, plant, equipment, appliances, implements, tools, furniture, furnishings, clothing, chemicals, hardware (including IT), kitchen/cleaning items, medical supplies, stationery and software.
+								Excludes the management of buildings, structures and land and the management of moveable assets, required for the delivery of core functions, which have specific retention requirements (e.g. firearms).
+								See COMMON ACTIVITIES – Compensation for records relating to compensation/insurance claims for injuries and/or damage/loss of assets.
+								See FINANCIAL MANAGEMENT – Accounting for the financial management of moveable assets.
+								See PROPERTY MANAGEMENT for the management of buildings, structures or land.
+								See WORK HEALTH AND SAFETY – Accidents and Incidents for records relating to work health and safety accidents and incidents that involve agency assets.</p>
+								
+								 <ul class="nav nav-tabs">
+									<li class="dropdown" style="float:left; margin-left: 42%;">
+									<a data-toggle="dropdown" class="dropdown-toggle" href="#sectionB">Sub-sections <b class="caret"></b></a>
+										<ul class="dropdown-menu">
+											<li><a data-toggle="tab" href="#dropdownpAA">MOVEABLE ASSETS</a></li>
+											<li><a data-toggle="tab" href="#dropdownpAB">VEHICLES</a></li>
+											
+										</ul>
+									</li>
+								</ul>
+								<div class="tab-content">
+												<div id="dropdownpAA" class="tab-pane fade in active">
+												<h2>MOVEABLE ASSETS</h2>
+												<p style="text-align: justify;">Acquiring, monitoring, assessing, managing and disposing of an agency’s moveable assets. Includes the evaluation, installation and allocation of moveable assets as well as monitoring to ensure the implementation goes according to schedule and is to an acceptable standard. Disposal includes the sale, transfer, termination of lease, auction, donation, exchange, return or destruction of the moveable asset.
+												See COMMON ACTIVITIES:
+												•	Agreements for records relating to the leasing of moveable assets (e.g. vehicles)
+												•	Planning for disaster recovery plans.
+												See FINANCIAL MANAGEMENT for financial records relating to moveable assets.
+												See INFORMATION MANAGEMENT – Database Administration for records relating to system migration and specialised digital preservation treatments
+												See PROPERTY MANAGEMENT – Building and Land Management for records relating to the installation of moveable assets where structural changes are required (e.g. the installation of cabling for communications networks from a network hub).
+												See TRANSITORY AND SHORT TERM – Routine Computer Operations for records relating to requests for system access.
+												See WORKFORCE MANAGEMENT – Training provision for records relating to training provided to employees as part of the implementation of new equipment and systems.</p>
+
+												</div>
+												<div id="dropdownpAB" class="tab-pane fade in active">
+												<h2>VEHICLES</h2>
+													<p style="text-align: justify;">Registration, maintenance and booking of agency vehicles.
+													See ASSET MANAGEMENT – Moveable assets-other for records relating to the acquisition and disposal of agency vehicles.</p>
+
+													
+												</div>
+								</div>
+								
+								
+							</div>
+							<div id="dropdownp14" class="tab-pane fade">
+								<h2>Collection Management</h2>
+								<p style="text-align: justify;">Acquiring, organising and processing the collection of a library and/or information centre, museum, art gallery, theatre etc. Includes those collections that support agency functions and which are not their core business, e.g. school libraries. Also includes the selection, ordering, accessioning, acquisition, cataloguing, index, evaluation of collection material, and preserving of collection material and use of the collection.
+								Excludes agencies where collection management is a core function. 
+								See ASSET MANAGEMENT for records relating to the acquisition, maintenance and disposal of hardware, internet services, software and telecommunications equipment.
+								See COMMON ACTIVITIES: 
+								 
+								•	Policy
+								•	Planning
+								•	Procedures
+								•	Risk Management
+								 
+								See EXTERNAL RELATIONS:
+								•	Donations for records relating to gifts, benefits and bequests
+								•	Exhibitions for records relating to exhibitions
+								•	Program and Event Management for records relating to programs and events presented or hosted by a cultural institution or library.
+								See INFORMATION MANAGEMENT – Copyright Administration for records relating to copyright.
+								See PROPERTY MANAGEMENT for records relating to library, museum, art gallery, theatre, etc. buildings.
+								See WORKFORCE MANAGEMENT for records relating to employing staff.
+								See TRANSITORY AND SHORT TERM:
+								•	Collections-Control and Management for records relating to the control and management of general collections
+								•	Moveable Assets Controls and Stocktakes for records relating to collection stocktakes
+								•	Reference and Lending Services for records relating to services provided by staff
+								•	Space Management records relating to the assessment and management of storage space.</p>
+								<ul class="nav nav-tabs">
+									<li class="dropdown" style="float:left; margin-left: 42%;">
+									<a data-toggle="dropdown" class="dropdown-toggle" href="#sectionC">Sub-sections <b class="caret"></b></a>
+										<ul class="dropdown-menu">
+											<li><a data-toggle="tab" href="#dropdownpBA">COLLECTION PRESERVATION</a></li>
+											<li><a data-toggle="tab" href="#dropdownpBB">CULTURAL COLLECTION MANAGEMENT</a></li>
+											
+										</ul>
+									</li>
+								</ul>
+								<div class="tab-content">
+												<div id="dropdownpBA" class="tab-pane fade in active">
+												<h2>COLLECTION PRESERVATION</h2>
+													<p style="text-align: justify;">Preserving, protecting, maintaining, restoring and enhancing collections.</p>
+												</div>
+												<div id="dropdownpBB" class="tab-pane fade in active">
+												<h2>CULTURAL COLLECTION MANAGEMENT</h2>
+													<p style="text-align: justify;">Managing cultural collections which include museums, art galleries, theatres, archives and rare book collections. Includes libraries that have a dedicated cultural collection (e.g. rare books).
+													Excludes the core business records of the State Library of Queensland and Queensland Museum.
+													See State Library of Queensland Retention and Disposal Schedule (QDAN195) for records relating to the core business records of the State Library of Queensland.
+													See Queensland Museum Retention and Disposal Schedule (QDAN697) for records relating to the core business records created by the Queensland Museum Network.</p>
+												</div>
+								</div>
+							</div>
+							<div id="dropdownp13" class="tab-pane fade">
+								<h2>EXTERNAL RELATIONS</h2>
+								<p style="text-align: justify;">Managing relationships with external bodies. Includes the agency’s relationship with community groups; Ministers and Members of Parliament and the political processes of government; liaison with bodies carrying out investigations and participating in formal inquiries and investigations such as Royal Commissions, Commissions of Inquiry and inquiries by Parliamentary Committees and the Ombudsman; and relationships with other local, state, Commonwealth or overseas governments. Also includes relationships with professional bodies and industry, the management of customer services, handling reactions to those services, customer consultation and feedback.
+								Reference should be made to the Queensland Cabinet Handbook for guidance in the management, maintenance and disposal of Cabinet records. 
+								See COMMON ACTIVITIES:
+								•	Advice for records relating to advice provided or received by an agency
+								•	Agreements for records relating to contracts, joint ventures and public-private partnerships
+								•	Audit for records relating to planning and conduct of audits
+								•	Committees for records relating to the appointment of agency representatives to external committees
+								•	Liaison for records relating to general contact with professional associations, professionals in related fields, other agencies, private sector organisations and community groups
+								•	Reporting for records relating to a formal response to a situation or request.</p>
+
+								<ul class="nav nav-tabs">
+									<li class="dropdown" style="float:left; margin-left: 42%;">
+									<a data-toggle="dropdown" class="dropdown-toggle" href="#sectionD">Sub-sections <b class="caret"></b></a>
+										<ul class="dropdown-menu">
+											<li><a data-toggle="tab" href="#dropdownpCA">ADDRESSES, PRESENTATIONS OR SPEECHES</a></li>
+											<li><a data-toggle="tab" href="#dropdownpCB">CUSTOMER SERVICE</a></li>
+											<li><a data-toggle="tab" href="#dropdownpCC">DONATIONS</a></li>
+											<li><a data-toggle="tab" href="#dropdownpCD">EXHIBITIONS</a></li>
+											<li><a data-toggle="tab" href="#dropdownpCE">ENQUIRIES AND REACTIONS</a></li>
+											
+										</ul>
+									</li>
+								</ul>
+								<div class="tab-content">
+												<div id="dropdownpCA" class="tab-pane fade in active">
+												<h2>ADDRESSES, PRESENTATIONS OR SPEECHES</h2>
+													<p style="text-align: justify;">Addresses, presentations or speeches given at government or community occasions and conferences. 
+													See WORKFORCE MANAGEMENT – Training provision for records relating to staff training presentations.
+													See TRANSITORY AND SHORT TERM:
+													•	Administrative Arrangements for records relating to conducting addresses and applications, approvals and authorisations for employees travelling for work related celebrations
+													•	Drafts, Working Notes and Calculations for records relating to draft versions of addresses, presentations or speeches
+													•	Routine Communication for records relating to media releases regarding addresses.</p>
+
+												</div>
+												<div id="dropdownpCB" class="tab-pane fade in active">
+												<h2>CUSTOMER SERVICE</h2>
+													<p style="text-align: justify;">Planning, monitoring and evaluation of services provided to customers by the agency.
+													See EXTERNAL RELATIONS – Enquiries and Reactions for complaints from the public about customer services.
+													See TRANSITORY AND SHORT TERM:
+													•	Contact centre recordings for records relating to recording of customer and client calls created/maintained to support the provision of customer services and the monitoring of service standards and quality
+													•	Routine Communication for records relating to the handling of general enquiries concerning services, such as opening hours.</p>
+												</div>
+												<div id="dropdownpCC" class="tab-pane fade in active">
+												<h2>DONATIONS</h2>
+													<p style="text-align: justify;">Managing items, artefacts or property donated to the agency, or by the agency and/or its staff to charities, etc. Includes managing unsolicited donations. Includes refused gifts, donations and bequests.
+													NOTE: This activity should not be used by agencies where public donations provide major support for core functions. In these instances, coverage should be included in the agency’s own core function schedule.
+													See FINANCIAL MANAGEMENT – Asset and money management for records relating to financial transactions involving gifts and benefits.</p>
+													</div>
+													<div id="dropdownpCD" class="tab-pane fade in active">
+												<h2>EXHIBITIONS</h2>
+													<p style="text-align: justify;">Arranging, management or attendance of exhibitions. Includes exhibitions of both cultural and general institutions.
+													See COLLECTION MANAGEMENT for records relating to the management of collections.
+													See EXTERNAL RELATIONS:
+													•	Marketing for records relating to the promotion and advertising of exhibitions
+													•	Program and Event Management for records relating to the management or attendance at celebrations, ceremonies, functions, conferences and events.
+													See FINANCIAL MANAGEMENT – Asset and money management for records relating to payments made for and ticket sales of exhibitions.
+													See TRANSITORY AND SHORT TERM – Administrative Arrangements for records relating to the organisation of exhibitions.</p>
+													</div>
+													<div id="dropdownpCE" class="tab-pane fade in active">
+												<h2>ENQUIRIES AND REACTIONS</h2>
+													<p style="text-align: justify;">Handling of enquiries and reactions to an agency’s core functions, policies or services. Includes correspondence of appreciation, complaints and suggestions from members of the public or clients of the agency. Also includes responding to external surveys.
+													Excludes enquiries received by Ministers and Assistant Ministers from members of the public and private organisations.
+													See the Office of a Minister of the Crown & Parliamentary Secretaries retention and disposal schedule (QDAN328) for records of enquiries received by Ministers and Assistant Ministers from members of the public and private organisations.
+													See EXTERNAL RELATIONS:
+													•	Liaison for records relating to contact with lobbyists
+													•	Inquiries for records relating to any public interest disclosures that are made.
+													See INFORMATION MANAGEMENT – Information Privacy and Access records relating to compliance with the Right to Information Act 2009 and Information Privacy Act 2009.</p>
+													</div>
+													
+								</div>
+							</div>
+							<div id="dropdownp12" class="tab-pane fade">
+								<h2>FINANCIAL MANAGEMENT</h2>
+								<p style="text-align: justify;">Managing an agency’s financial resources. 
+								See COMMON ACTIVITIES – Risk assessment and mitigation for records relating to the identification and assessment of financial risks.</p>
+
+								<ul class="nav nav-tabs">
+									<li class="dropdown" style="float:left; margin-left: 42%;">
+									<a data-toggle="dropdown" class="dropdown-toggle" href="#sectionE">Sub-sections <b class="caret"></b></a>
+										<ul class="dropdown-menu">
+											<li><a data-toggle="tab" href="#dropdownpDA">ACCOUNTING</a></li>
+											<li><a data-toggle="tab" href="#dropdownpDB">AUTHORISATION</a></li>
+											<li><a data-toggle="tab" href="#dropdownpDC">BUDGETING</a></li>
+
+											
+										</ul>
+									</li>
+								</ul>
+								<div class="tab-content">
+												<div id="dropdownpDA" class="tab-pane fade in active">
+												<h2>ACCOUNTING</h2>
+													<p style="text-align: justify;">Collecting, recording, classifying, summarising and analysing of information on financial transactions to provide the financial position of the agency</p>
+												</div>
+												<div id="dropdownpDB" class="tab-pane fade in active">
+												<h2>AUTHORISATION</h2>
+													<p style="text-align: justify;">Authorisation or permission to perform certain actions.</p>
+													</div>
+													<div id="dropdownpDC" class="tab-pane fade in active">
+												<h2>BUDGETING</h2>
+													<p style="text-align: justify;">Managing the income and expenditure over a specified period.
+													Excludes state budget and fiscal management records held by Queensland Treasury.</p>
+													</div>
+								</div>
+							</div>
+								
+								
+								
+								
+								
+						</div>
+					</div>
+								
+			</div>
+	 </div>
+
+	<!-- show div based on seletion	-->
+	
+	<div id="preview" style="color:#999999; font-size:14px">
+PREVIEW
+</div>
+	
+	<div id="advice" class="xxx">
+	<div class="result-box">
+		<h2>1000 Advice - significant </h2>
+		
+		<p class="more">Records relating to significant high-level advice provided or received by the agency on substantial aspects of agency functions, responsibilities, obligations and liabilities.
+			Significant advice may include, but is not limited to:
+			? having far-reaching social, economic and/or national implications
+			? result in a reversal of a government decision and/or changes to government/agency policy
+			? generates substantial public interest and debate.
+			Includes formal briefings provided to Mayors, Councillors and senior agency officials, e.g. Director-General.
+			Records may include, but are not limited to:
+			? briefing notes
+			? development of advice
+			? advice to other agencies.
+		
+			</p>
+	</div>
+
+	<div class="result-box">
+		<h2>1001 Advice - other</h2>
+		<p class="more" >Records relating to advice provided or received by the agency that relates to the functions of the agency that is not considered to be significant.
+		Includes provision of advice on legislation formulated by other agencies.
+		Records may include, but are not limited to:
+		? briefing notes
+		? advice to and from other agencies.</p>
+		
+		</div>
+	</div>
+		<div id="agreements"  class="xxx">
+		<div class="result-box">
+			<h2>1002 Agreements and contracts - significant</h2>
+			<p class="more" >Agreements and contracts – significant
+			Records relating to agreements and contracts, including joint ventures and public-private partnerships, which are of major significance to the agency and the State or which have created major public interest or controversy.
+			Includes significant agreements that do not proceed.
+			Significant agreements and contracts may include, but are not limited to:
+			? all agreements and contracts with the Commonwealth or other States (e.g. national partnership agreements) that have State significance
+			? large scale projects or programs requiring Ministerial approval
+			? transfer of government or agency responsibilities, functions, obligations or liabilities (e.g. machinery-of-government changes)
+			? major liabilities or obligations for the agency
+			? sale, outsourcing or long-term leasing of government functions
+			? Aboriginal and Torres Strait Islander rights (e.g. Indigenous land use agreements)
+			? claims or matters that are precedent setting
+			? significant industrial and workplace agreements, awards and enterprise bargaining.
+			Records may include, but are not limited to:
+			? contract negotiations
+			? drafts containing significant changes/alterations or formally circulated for comment
+			? final, approved versions of agreements
+			? service level agreements
+			? lease agreements
+			? reviews of agreements
+			? correspondence with stakeholders
+			? responding to tenders.
+			See INDUSTRIAL RELATIONS – Workplace agreements and awards-standard for records relating to standard workplace agreements.</p>
+		</div>
+			<div class="result-box">
+			<h2>1003 Agreements and contracts - under seal</h2>
+			<p class="more" >Records relating to agreements and contracts which have been approved under seal (speciality contracts).
+				Excludes significant agreements.
+				Records may include, but are not limited to:
+				? contract negotiations
+				? drafts containing significant changes/alterations or formally circulated for comment
+				? final, approved versions of agreements, memoranda of understanding and/or memoranda of agreement
+				? reviews of agreements
+				? correspondence with stakeholders
+				? responding to tenders.
+				See COMMON ACTIVITIES – Agreements and contracts-significant for speciality contracts that are considered significant.
+				See INDUSTRIAL RELATIONS – Workplace agreements and awards-standard for records relating to standard workplace agreements.</p>
+							
+			
+		</div>
+		
+		
+		<div class="result-box">
+			<h2>1004 Agreements and contracts - not under seal</h2>
+			<p class="more" >Records relating to agreements and contracts which are approved and are not under seal.
+				Includes joint venture projects, superannuation trustee agreements, insurance policies, service level agreements, lease agreements and intellectual property licences.
+				Records may include, but are not limited to:
+				? contract negotiations
+				? drafts containing significant changes/alterations or formally circulated for comment
+				? final, approved versions of agreements, memoranda of understanding and/or memoranda of agreement
+				? reviews of agreements
+				? correspondence with stakeholders
+				? responding to tenders
+				? the purchase order
+				? any specifications.
+				See COMMON ACTIVITIES – Agreements and contracts-significant for contracts that are not under seal that are considered significant.
+				See INDUSTRIAL RELATIONS – Workplace agreements and awards-standard for records relating to standard workplace agreements.</p>
+										
+			
+		</div>
+		
+		<div class="result-box">
+			<h2>1005 Agreements and contracts not proceeded with</h2>
+			<p class="more" >Records relating to agreements and contracts that have not been successfully negotiated and approved.
+			Excludes significant agreements that do not proceed.
+			Records may include, but are not limited to:
+			? draft agreements
+			? draft memorandum of understanding
+			? draft negotiation papers
+			? withdrawn offers
+			? proposals.
+			See COMMON ACTIVITIES – Agreements and contracts-significant for agreements that do not proceed that would have been considered significant.</p>
+									
+			
+		</div>
+		<div class="result-box">
+			<h2>1006 Agreements and contracts register</h2>
+					<p class="more" >Entries in the agreements and/or contracts register.
+			See FINANCIAL MANAGEMENT – Asset and money management for records relating to the management of the agency’s financial commitments for future expenditure, which are not yet formalised in a contract.
+			See INFORMATION MANAGEMENT – Control for records relating to master control records for contractual records.</p>
+									
+		
+	</div>
+	
+	</div>
+	
+	
+	
+	</section>
+
+    <script src="js/classie.js"></script>
+    <script src="js/selectFx.js"></script>
+    <script>
+      (function() {
+        [].slice.call( document.querySelectorAll( 'select.cs-select' ) ).forEach( function(el) {  
+          new SelectFx(el);
+        } );
+      })();
+    </script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="js/johngallery1.min.js"></script>
+	<script src="js/ie10-viewport-bug-workaround.js"></script>
+	
+	
+</body>
+<html>

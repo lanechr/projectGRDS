@@ -1,0 +1,728 @@
+/* - 0. Old CSS
+/*================================================*/
+
+#uniqueResult {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-color: black;
+    border-width: 2px;
+    border-style: solid;
+}
+
+
+/* - 1. Layout
+/*================================================*/
+
+.align {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 5px;
+}
+
+
+#documentSearchForm,
+#resultsWrapper {
+}
+
+.container {
+    min-height: calc(100vh - 100px);
+    padding-top: 10%;
+    clear: both;
+}
+
+
+/* - 2. Backgrounds
+/*================================================*/
+
+header,
+footer {
+    background: #2A80B2;
+    height: 44px;
+}
+
+html, body {
+    background-color: #F3F8FA !important;
+    height: 100%;
+    margin: 0;
+}
+
+#title {
+    color: #484847;
+    font-size: 34px;
+    margin-bottom: 20px;
+}
+
+
+/* - 3. Fonts
+/*================================================*/
+
+header h1 {
+    color: white;
+    font-weight: 300;
+    font-size: 1em;
+}
+
+.container h1 {
+    font-weight: 300;
+    font-size: 1.5em;
+}
+
+footer h2 {
+    color: white;
+    font-weight: 300;
+    font-size: 0.75em;
+    padding: 10px;
+    margin-bottom: 0px;
+}
+
+header h1 {
+    color: white;
+    font-weight: 300;
+    font-size: 1em;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+}
+
+
+/* - 4. Search Input
+/*================================================*/
+
+#searchInput,
+#noOfResults_text {
+    width: 250px;
+}
+
+#search {
+    border: none;
+    background: #2A80B2;
+    text-align: center;
+    margin-left: -76px;
+    height: 40px;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    position: relative;
+}
+
+#searchForm {
+    padding: 0px;
+    height: auto;
+    width: auto;
+    display: inline-block;
+    background: #E9EFF1;
+    border-radius: 10px;
+}
+
+[type=submit] {
+    border: none;
+    background: #2A80B2;
+    text-align: center;
+    padding-top: 0px;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+option {
+    font-weight: 300;
+    font-style: italic;
+}
+
+#input-container {
+  padding-left: 10px;
+}
+
+#omniInput {
+    border-color: transparent;
+    border-radius: 5px;
+    width: auto;
+    height: 40px;
+    padding: 5px 10px 5px 10px;
+}
+
+#adminEmailInput {
+    border-color: transparent;
+    border-radius: 5px;
+    width: 380px;
+    height: 40px;
+    padding: 5px 10px 5px 10px;
+}
+    #omniInput::placeholder {
+        font-style: italic;
+    }
+
+@media (max-width: 445px) {
+    #adminEmailInput{
+        width: 250px;
+    }
+}
+
+#grdsFunctionList, #grdsActivityList {
+    padding: 20px 10px;
+    width: 200px;
+    border: none;
+}
+
+input:focus, textarea:focus, button:focus {
+    outline:none;
+}
+
+/* - 5. Result Cards
+/*================================================*/
+
+#testOutput {
+    font-style: italic;
+    font-weight: 200;
+    text-align: right;
+}
+
+.card-body {
+    border-style: solid;
+    border-color: #E9EFF1;
+    border-width: 10px;
+    border-radius: 10px;
+    background-color: white;
+    margin-top: 20px;
+}
+
+.idBox {
+    background: #9DCD77;
+    color: white;
+    margin-left: 20px;
+}
+
+.updateButton {
+    background: #2A80B2;
+    color: white;
+    margin-left: 20px
+}
+
+
+#resultsDiv:last-child {
+    padding-bottom: 50px;
+}
+
+/* - 6. Login and Signup elements
+/*================================================*/
+
+#loginCard{
+	min-width: 230px;
+	max-width: 500px;
+	width: 40%;
+
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#emailInput, #passwordInput, #fnameInput, #lnameInput {
+	margin-bottom: 10px;
+}
+
+.submitBtn, .save-btn{
+	background-color: rgb(42,128,178);
+	color: white;
+	min-width: 100px;
+	width: 100%;
+}
+
+
+/* - 7. Google Web Fonts: Icons
+/*================================================*/
+
+
+/* Rules for sizing the icon. */
+
+.material-icons.md-18 {
+    font-size: 18px;
+}
+
+.material-icons.md-24 {
+    font-size: 24px;
+}
+
+.material-icons.md-36 {
+    font-size: 36px;
+}
+
+.material-icons.md-48 {
+    font-size: 48px;
+}
+
+
+/* Rules for using icons as black on a light background. */
+
+.material-icons.md-dark {
+    color: rgba(0, 0, 0, 0.54);
+}
+
+.material-icons.md-dark.md-active {
+    color: rgba(0, 0, 0, 0.26);
+}
+
+.material-icons.md-light {
+    color: rgba(255, 255, 255, 1);
+}
+
+.material-icons.md-light.md-inactive {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+#dropdowns {
+    display: none;
+}
+
+/* - 7. Links
+/*================================================*/
+a:hover{
+    text-decoration: none;
+}
+
+/* - 8. Spinner
+/*================================================*/
+
+.spinner {
+  width: 34px;
+  height: 34px;
+  background-color: #ffffff;
+  position: absolute;
+  top: 3;
+  left: 7;
+  border-radius: 100%;
+  -webkit-animation: sk-scaleout 0.5s infinite ease-in-out;
+  animation: sk-scaleout 0.5s infinite ease-in-out;
+}
+
+.hide-search-icon{
+	opacity: 0.0;
+}
+
+@-webkit-keyframes sk-scaleout {
+  0% { -webkit-transform: scale(0) }
+  100% {
+    -webkit-transform: scale(0.7);
+    opacity: 0;
+  }
+}
+
+@keyframes sk-scaleout {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  } 100% {
+    -webkit-transform: scale(0.7);
+    transform: scale(0.7);
+    opacity: 0;
+  }
+}
+
+/* - 9. Select Menus
+/*================================================*/
+
+.list {
+    max-height: 50vh;
+    overflow-y: scroll !important;
+}
+
+/* - 10. Search Input
+/*================================================*/
+
+@media (min-width: 768px) {
+    #omniInput{
+        width: 600px;
+    }
+}
+
+@media (max-width: 750px) {
+    #omniInput{
+        width: 400px;
+    }
+}
+/* - 11. Result Indenting (for compatibility with QuillJS)
+/*=================================================*/
+.indent-1 {
+    margin-left: 4.5em;
+}
+
+.indent-2 {
+    margin-left: 7.5em;
+}
+
+.indent-3 {
+    margin-left: 10.5em;
+}
+
+#hiddenuserid {
+    display: none;
+}
+
+#hiddentoken {
+    display: none;
+}
+
+#hiddendaid {
+    display: none;
+}
+
+#resetlinks {
+    position: relative;
+    top: -8px;
+    font-size: 8pt;
+    margin-left: 22px;
+}
+
+#resetbutton {
+    position: relative;
+}
+
+.resetspinner {
+  width: 34px;
+  height: 34px;
+  background-color: #ffffff;
+  position: absolute;
+  top: 1;
+  right: 1;
+  border-radius: 100%;
+  -webkit-animation: sk-scaleout 0.5s infinite ease-in-out;
+  animation: sk-scaleout 0.5s infinite ease-in-out;
+}
+
+/* Slider from w3schools*/
+/* ================================== */
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {display:none;}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* - 13. Account Page Elements
+/*=================================================*/
+#acc-container {
+  padding-top: 80px;
+}
+#acc-title {
+  font-size: 34px;
+  text-align: center;
+}
+
+#acc-card {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.acc-h2 {
+  display: inline;
+  font-size: 1rem;
+}
+
+#acc-details-display {
+  margin: 0px 10px;
+  width: 100%;
+  border-collapse: separate;
+  padding: 10px 20px;
+  line-height: 40px;
+  table-layout: fixed;
+}
+
+#acc-details-display tr {
+  margin: 15px 0px;
+}
+
+.td-fixed {
+  width: 180px;
+}
+
+.user-details {
+    display: inline;
+}
+
+.acc-edit {
+  text-align: right;
+  width: 100%;
+}
+
+#edit-btn {
+  font-size: 1.8rem;
+  transition: 0.2s ease-in-out;
+}
+
+#edit-btn:hover {
+  color: rgba(42, 128, 178, 0.7);
+}
+
+#notifications {
+  font-size: 0.9rem;
+  line-height: 20px;
+}
+
+#acc-fname, #acc-lname, #acc-pwd, #acc-pwd-check, #acc-email {
+  width: 100%;
+}
+
+.edit-error p {
+  margin: 0;
+}
+
+.edit-error i {
+  margin: 0px 10px;
+}
+
+.editing-details {
+  display: none;
+}
+
+.submit-btn-container {
+  display: none;
+  width: 100%;
+  text-align: right;
+  margin: 20px 0px 30px 0px;
+}
+
+#save-btn {
+  background: #2A80B2;
+  color: white;
+}
+
+#save-btn:hover {
+  color: rgba(0,0,0,0.4);
+}
+#cancel-btn {
+    font-size: 1.8rem;
+    transition: 0.2s ease-in-out;
+    padding-bottom: 10px;
+}
+
+.fake-link {
+    color: #2b98F0;
+    cursor: pointer;
+}
+
+.fake-link:hover {
+    color: #0559B0;
+    cursor: pointer;
+}
+
+#accountbuttonrow {
+    text-align: right;
+}
+
+#cancelbtn, #savebtn {
+  color: #FFFFFF;
+}
+
+#savebtn {
+  background-color: #2A80B2;
+  border-color: #2A80B2;
+}
+
+/* - 14. Media Queries
+/*=================================================*/
+@media (max-width: 848px) {
+  #acc-card {
+    width: 100%;
+  }
+}
+
+@media (max-width: 540px) {
+  #acc-details-display {
+    padding: 0;
+    margin: 0;
+  }
+  #save-btn {
+    width: 100%;
+  }
+  .td-fixed {
+    width: 100%;
+  }
+}
+
+
+/* - 16. Tool Tips
+/*=================================================*/
+
+.btn {
+    position: relative;
+    display: inline-block;
+}
+
+.btn .tooltiptext, .btn .tooltiptextBookmark {
+	visibility: hidden;
+    background-color: rgba(0, 0, 0, 0.81);
+    color: #fff;
+    text-align: center;
+    padding: 8px 8px;
+    border-radius: 6px;
+    font-size: 12px;
+ 
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1;
+}
+
+.btn .tooltiptext {
+	width: 190px;
+	
+	left: -75px;
+    top: 40px;
+}
+
+.btn .tooltiptextBookmark {
+	width: 130px;
+	
+	left: -6px;
+    top: 45px;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.btn:hover .tooltiptext {
+    visibility: visible;
+}
+
+.btn:hover .tooltiptextBookmark {
+    visibility: visible;
+}
+
+.tooltiptext a {
+	color: #64bbec;
+}
+
+
+/* - 17. Add/Remove Admin
+/*=================================================*/
+#adminEmailInput::placeholder {
+  font-style: italic;
+}
+
+#resultsDiv {
+  padding-top: 35px;
+}
+
+.userCard {
+  width: 65%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.userCard table {
+  width: 100%;
+  table-layout: fixed;
+}
+
+.userCard tr:nth-child(1) {
+  border-bottom: 1px solid rgba(179, 213, 229,0.5)
+}
+
+.userBottomRow {
+  background-color: #e1eef4;
+}
+
+.userCard th {
+  padding-bottom: 10px;
+  color: #6b6b6b;
+}
+
+.userCard td {
+  line-height: 40px;
+  padding-left: 5px;
+}
+
+.nameCol {
+  width: 140px;
+}
+
+.adminCol {
+  width: 70px;
+}
+
+.switch {
+  margin: 0;
+}
+
+#switchCol {
+  padding: 0;
+}
+
+.spacer {
+  width: 70px;
+}
+
+.idCol {
+  width: 70px;
+  margin-right: 40px;
+}
+
+#userIDholder {
+  text-align: right;
+  padding-right: 10px;
+}
+
+@media (max-width: 850px) and (min-width: 320px) {
+  .userCard {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) and (min-width: 320px) {
+  .nameCol {
+    width: auto;
+  }
+
+  .spacer {
+    width: 10px;
+  }
+}

@@ -1,0 +1,87 @@
+#editor {
+  height: 375px;
+}
+
+
+.ql-editor {
+    background-color: white;
+}
+
+.ql-toolbar {
+    background-color: #81bbe4;
+}
+
+#hiddendaid, #hiddenuserid {
+    display: none;
+}
+
+.container{
+  padding-top: 15px;
+}
+
+#record-details{
+  padding-bottom: 25px;
+  padding-top: 25px;
+}
+
+.title{
+  font-size: 34px;
+}
+
+#alldetails{
+  padding-top: 25px;
+}
+
+#buttonrow a{
+  color: white;
+}
+
+.btn-warning{
+  background: #c6c6c6;
+  border: none;
+}
+
+.btn-warning:hover{
+  border: none;
+  background: #c6c6c6;
+}
+
+#cancelbtn:hover{
+  color: #939393;
+}
+
+#savebtn:hover{
+  color: #35933c;
+}
+
+
+.btn-success{
+ background: #55ba60;
+ color: white;
+ border: none;
+}
+
+.btn-success:hover{
+  border: none;
+  background: #55ba60;
+}
+
+#buttonrow{
+  text-align: right;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+#editor{
+  height: 200px;
+}
+
+#reason label{
+  padding-top: 25px;
+  font-size: 20px;
+}
+
+#reasontextbox{
+  width: 100%;
+  height: 50px;
+}

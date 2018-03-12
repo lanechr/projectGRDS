@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700|Merriweather:400italic,400' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+	<script src="js/modernizr.js"></script> <!-- Modernizr -->
+
+	<link rel="stylesheet" href="css/jquery.jscrollpane.css" />
+	<link rel="stylesheet" href="css/customSelectBox.css" />
+
+	<link href="css/owl.carousel.css" rel="stylesheet">
+    <link href="css/owl.theme.css" rel="stylesheet">
+    <script type="text/javascript">
+    function validate() {
+	    if (document.searchFunction.keyword.value === "" && document.searchFunction.division.value === "Select division..." && document.searchFunction.subDivision.value === "Select subdivision..."){
+	        window.alert("Please insert a keyword, division, or sub-division");
+	        return false;
+	    }
+	    return (true);
+	}
+	</script>
+
+
+	<title>GRDS - BY MINERVA CO.</title>
+
+
+</head>
+<body class="noJS">
+	<script>
+		var bodyTag = document.getElementsByTagName("body")[0];
+			bodyTag.className = bodyTag.className.replace("noJS", "hasJS");
+	</script>
+	<a class="cd-nav-trigger cd-text-replace" href="#primary-nav">Menu<span aria-hidden="true" class="cd-icon"></span></a>
+	
+	<div class="cd-projects-container">
+		<ul class="cd-projects-previews">
+			<li>
+				<a href="#0">
+					<div class="cd-project-title">
+						<h1>Looking for documents?</h1>
+						<p>Use our new and improved searching system to find it.</p>
+					</div>
+				</a>
+			</li>
+
+			<li>
+				<a href="#0">
+					<div class="cd-project-title">
+						<h1>'I don't know where to begin!'</h1>
+						<p>Don't worry, you can still browse through all of our documents to start.</p>
+					</div>
+				</a>
+			</li>
+		</ul> <!-- .cd-projects-previews -->
+
+		<ul class="cd-projects">
+			<li>
+				<div class="cd-project-info">
+					<div class="col-sm-12 wow">
+	                     <div id="owl-demo-1" class="owl-carousel">
+							<a >
+								<div class="item">
+								<br>
+								<br>
+								<br>
+								<br>
+								<br>
+								<h1>Search Now</h1>
+								<br>
+								<p>The GRDS covers records of common activities <br>
+								and the functions, transitory, and short term records <br>
+								created as part of routine transactional business<br>
+								practices.
+								</p>
+								</div>
+							</a>
+							<a class="image-link">
+								<div class="item">
+								<h1>title </h1>
+								</div>
+							</a>
+							<a href="img/iphone.png" class="image-link">
+								<div class="item">
+								<h1>title</h1>		
+								</div>
+							</a>
+						</div>  
+
+					<div class=footer1>
+						<b>Feeling Lost?<a href="browse.html" class="pinkcolor"> Browse All</a></b>
+					</div>
+  
+	                </div>
+
+
+				</div> <!-- .cd-project-info -->
+
+				<div class="cd-project-info-two">
+					<form  action="results.php" method="get" name=searchFunction onsubmit="return(validate());">
+						<div class="label-text">Keyword</div>
+						<div class="row">
+							<div class="col-sm-8">
+								<input id="text1" class="form-control modelin" type="text" name="keyword" placeholder="Type in your keyword, e.g.:legal "/>
+							</div>
+						</div>
+
+						<div class="label-text">Division</div>
+						<div class="row" style="padding-left:20% ">
+							<select name="division" class=" custom">
+								<option>Select division...</option>
+						            <optgroup label="OPTIONS ---">
+						              <option value="1">Common Activities</option>
+						              <option value="2">Option2</option>
+						              <option value="3">Option3</option>
+						              <option value="4">Option4</option>
+						              <option value="5">Option5</option>
+						              <option value="6">Option6</option>
+						              <option value="7">Option7</option>
+						              <option value="8">Option8</option>
+						            </optgroup>
+						            <optgroup label="OPTIONS---">
+						              <option value="5">Option5</option>
+						              <option value="6">Option6</option>
+						              <option value="7">Option7</option>
+						              <option value="8">Option8</option>
+						              <option value="5">Option5</option>
+						              <option value="6">Option6</option>
+						              <option value="7">Option7</option>
+						              <option value="8">Option8</option>
+						            </optgroup>
+							</select>
+						</div>	
+						<br>
+						<br>
+						<br>
+						<div class="label-text">Sub-Division</div>
+						<div class="row" style="padding-left:20% ">
+							<select name="subDivision" class="tengah custom">
+								<option>Select subdivision...</option>
+						            <optgroup label="OPTIONS ---">
+						              <option value="1">Publication</option>
+						              <option value="2">Option2</option>
+						              <option value="3">Option3</option>
+						              <option value="4">Option4</option>
+						              <option value="5">Option5</option>
+						              <option value="6">Option6</option>
+						              <option value="7">Option7</option>
+						              <option value="8">Option8</option>
+						            </optgroup>
+						            <optgroup label="OPTIONS---">
+						              <option value="5">Option5</option>
+						              <option value="6">Option6</option>
+						              <option value="7">Option7</option>
+						              <option value="8">Option8</option>
+						              <option value="5">Option5</option>
+						              <option value="6">Option6</option>
+						              <option value="7">Option7</option>
+						              <option value="8">Option8</option>
+						            </optgroup>
+							</select>
+						</div>	
+
+						<div class="row">
+				          <button type="submit" class="searchbtn">Search Now</button>
+						</div>
+
+						<br>
+					</form>
+				</div> <!-- .cd-project-info -->
+			</li>
+
+			<li>
+				<div class="preview-image">
+					<div class="cd-project-title">
+						<h1><u><a href="browse.html" style="color:white; ">BROWSE GRDS DOCUMENT</a><u></h1>
+						<a href="browse.html"><img src="img/doc.png" width="13%" height="13%" alt="logo" style="margin-top: 2%; background-color: white; border-radius: 20px;"></a>
+					</div> 
+				</div>
+
+				
+			</li>
+		</ul> <!-- .cd-projects -->
+
+	</div> <!-- .cd-project-container -->
+
+	<nav class="cd-primary-nav" id="primary-nav">
+		<ul>
+			<li class="cd-label">Navigation</li>
+			<li><a href="login.html">Administrator Login</a></li>
+			<li><a href="#0">Contact us</a></li>
+		</ul>
+	</nav> <!-- .cd-primary-nav -->
+
+<script src="js/jquery-2.1.1.js"></script>
+<script src="js/main.js"></script> 
+
+<script src="js/jScrollPane.js"></script>
+<script src="js/jquery.mousewheel.js"></script>
+<script src="js/SelectBox.js"></script>
+<script>	
+	$(function() {
+		
+		$("select.custom").each(function() {					
+			var sb = new SelectBox({
+				selectbox: $(this),
+				height: 150,
+				width: ("75%")
+			});
+		});
+		
+	});
+</script>
+
+<script src="js/owl.carousel.js"></script>
+<script src="js/script.js"></script>
+<!-- StikyMenu -->
+
+<!-- Smoothscroll -->
+<script src="js/wow.min.js"></script>
+
+<!-- Magnific Popup core JS file -->
+<script src="js/jquery.magnific-popup.js"></script> 
+
+
+<!-- Resource jQuery -->
+</body>
+</html>
